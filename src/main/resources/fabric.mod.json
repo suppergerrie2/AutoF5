@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "sautof5",
+	"version": "${version}",
+	"name": "Auto F5",
+	"description": "Automatically switch to third person view (F5) when entering a vehicle.",
+	"authors": [
+		"suppergerrie2"
+	],
+	"contact": {
+		"homepage": "https://legacy.curseforge.com/minecraft/mc-mods/auto-f5",
+		"sources": "https://github.com/suppergerrie2/AutoF5"
+	},
+	"license": "MIT",
+	"icon": "assets/sautof5/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"com.suppergerrie2.autof5.AutoF5"
+		]
+	},
+	"mixins": [
+		"sautof5.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.6",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"owo-lib": ">=0.12.3+1.20.3"
+	}
+}

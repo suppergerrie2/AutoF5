@@ -1,0 +1,17 @@
+{
+  "text.config.auto-f5-config.title": "AutoF5 Config",
+
+  "text.config.auto-f5-config.option.returnPerspective": "Return Perspective",
+  "text.config.auto-f5-config.option.returnPerspective.tooltip": "Perspective to return to when exiting a vehicle.",
+  "text.config.auto-f5-config.option.returnPerspective.value.previous": "Previous View",
+  "text.config.auto-f5-config.option.returnPerspective.value.first_person": "First Person",
+  "text.config.auto-f5-config.option.returnPerspective.value.third_person_back": "Third Person Back",
+  "text.config.auto-f5-config.option.returnPerspective.value.third_person_front": "Third Person Front",
+
+  "text.config.auto-f5-config.option.defaultVehiclePerspective": "Return Perspective",
+  "text.config.auto-f5-config.option.defaultVehiclePerspective.tooltip": "Perspective to return to when exiting a vehicle.",
+  "text.config.auto-f5-config.option.defaultVehiclePerspective.value.previous": "Current View",
+  "text.config.auto-f5-config.option.defaultVehiclePerspective.value.first_person": "First Person",
+  "text.config.auto-f5-config.option.defaultVehiclePerspective.value.third_person_back": "Third Person Back",
+  "text.config.auto-f5-config.option.defaultVehiclePerspective.value.third_person_front": "Third Person Front"
+}
