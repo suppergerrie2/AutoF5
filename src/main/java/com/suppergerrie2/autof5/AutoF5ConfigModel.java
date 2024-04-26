@@ -18,7 +18,7 @@ public class AutoF5ConfigModel {
 
         public Perspective getPerspective(Perspective previousPerspective) {
             return switch (this) {
-                case PREVIOUS -> previousPerspective;
+                case PREVIOUS -> previousPerspective == null ? Perspective.FIRST_PERSON : previousPerspective; // Default to first person if previous perspective is null
                 case FIRST_PERSON -> Perspective.FIRST_PERSON;
                 case THIRD_PERSON_BACK -> Perspective.THIRD_PERSON_BACK;
                 case THIRD_PERSON_FRONT -> Perspective.THIRD_PERSON_FRONT;

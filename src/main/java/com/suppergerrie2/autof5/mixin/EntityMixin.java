@@ -19,16 +19,18 @@ public class EntityMixin {
 
     @Inject(at = @At("TAIL"), method = "startRiding(Lnet/minecraft/entity/Entity;Z)Z")
     private void startRiding(Entity entity, boolean force, CallbackInfoReturnable<Boolean> cir) {
-        if (((Object) this) instanceof PlayerEntity e && e.getWorld().isClient()) {
-            previousPerspective = MinecraftClient.getInstance().options.getPerspective();
-            MinecraftClient.getInstance().options.setPerspective(AutoF5.CONFIG.defaultVehiclePerspective().getPerspective(previousPerspective));
+        MinecraftClient client = MinecraftClient.getInstance();
+        if (((Object) this) instanceof PlayerEntity e && e.getWorld().isClient() && e == client.player) {
+            previousPerspective = client.options.getPerspective();
+            client.options.setPerspective(AutoF5.CONFIG.defaultVehiclePerspective().getPerspective(previousPerspective));
         }
     }
 
     @Inject(at = @At("HEAD"), method = "stopRiding")
     private void stopRiding(CallbackInfo ci) {
-        if (((Object) this) instanceof PlayerEntity e && e.getWorld().isClient()) {
-            MinecraftClient.getInstance().options.setPerspective(AutoF5.CONFIG.returnPerspective().getPerspective(previousPerspective));
+        MinecraftClient client = MinecraftClient.getInstance();
+        if (((Object) this) instanceof PlayerEntity e && e.getWorld().isClient() && e == client.player) {
+            client.options.setPerspective(AutoF5.CONFIG.returnPerspective().getPerspective(previousPerspective));
         }
     }
 }
